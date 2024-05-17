@@ -35,6 +35,8 @@ def CodeLlama(locally = False):
 def main(unused_argv):
   tokenizer, llm = CodeLlama(True)
   def query(question, history):
+    question = question.replace('{','{{')
+    question = question.replace('}','}}')
     messages = list()
     for q,a in history[-5:]:
       messages.append({'role':'user', 'content':q})
