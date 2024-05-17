@@ -2,6 +2,7 @@
 
 from absl import flags, app
 from transformers import AutoTokenizer
+from huggingface_hub import login
 from langchain_community.llms import HuggingFaceEndpoint
 from langchain_community.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain_core.prompts.prompt import PromptTemplate
