@@ -10,7 +10,8 @@ import gradio as gr
 FLAGS = flags.FLAGS
 
 def add_options():
-  pass
+  flags.DEFINE_string('host', default = '0.0.0.0', help = 'host address')
+  flags.DEFINE_integer('port', default = 8081, help = 'port number')
 
 def CodeLlama(locally = False):
   login(token = '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')
